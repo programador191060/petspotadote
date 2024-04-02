@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina do Pet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --corPadrao: rgb(238, 102, 62);
+            --FontBallo: "Baloo 2", sans-serif;
+            --corSecundaria: rgb(227, 79, 5);
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100vh;
+            
+        }
+
+        a,
+        ul {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        header {
+            width: 100%;
+            height: 65px;
+            background-color: var(--corSecundaria);
+            display: none;
+
+        }
+
+        .contaner {
+            width: 100%;
+            max-width: 1148px;
+            height: 100%;
+            margin: auto;
+            padding: 0 15px;
+           
+
+        }
+
+        .painel-usuario {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .foto-usuario {
+            display: flex;
+            height: 100%;
+            width: 200px;
+            align-items: center;
+        }
+
+        .foto-usuario img {
+            width: 120px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .painel-usuario .status {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            color: white;
+            padding: 14px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .inputs-panel-pet {
+            font-size: 1.2em;
+
+            padding-left: 5px;
+
+        }
+
+        .localizacao-pesquisa {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+
+            justify-content: flex-end;
+        }
+
+        #inp-busca-pet {
+            background-image: url(img/icones/search.svg);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 10px) center;
+            width: 230px;
+        }
+
+        .inform-pet {
+            height: 400px;
+            border: none;
+        }
+
+        .descri-pet-contaner {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .descri-pet-contaner img {
+            border-radius: 20px;
+            width: 25%;
+
+        }
+
+        .dados-pet {
+            width: 40%;
+            height: 45%;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(254, 210, 145);
+            padding: 20px;
+            
+        }
+
+        .infor-card-adotante {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 270px;
+        }
+
+        .div-adotante img {
+            width: 70px;
+
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .div-adotante {
+            background-color: rgb(254, 210, 145);
+            width: 66%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+
+        }
+
+        .div-texto-adotante {
+            width: 66%;
+            background-color: rgb(254, 210, 145);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 0 15px;
+        }
+
+        .div-botao-adotante {
+
+            margin-top: 20px;
+            display: flex;
+            gap: 30px;
+            width: 66%;
+            justify-content: center;
+        }
+
+        .div-botao-adotante a {
+            padding: 10px 30px;
+            color: white;
+            background-color: var(--corPadrao);
+            border-radius: 10px;
+            font-size: 1.5em;
+        }
+
+        #fav img {
+            width: 100%;
+            max-width: 25px;
+
+        }
+
+        #msg img {
+            width: 100%;
+            max-width: 25px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contaner">
+            <div class="painel-usuario">
+                <div class="foto-usuario">
+                    <img src="img/imagens/stephanie.jpeg" alt="">
+                    <div class="status">
+                        <span>Stephanie</span>
+                        <span>Online</span>
+                    </div>
+                </div>
+
+
+                <div class="localizacao-pesquisa">
+                    <select name="localizar" id="localizar" class="inputs-panel-pet">
+                        <option value="">Insira a sua localização</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Minas Gerais">Minas Gerais</option>
+                        <option value="Barretos">Barretos</option>
+                    </select>
+                    <input type="text" id="inp-busca-pet" placeholder="Procure por Pets" class="inputs-panel-pet">
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="contaner inform-pet">
+            <div class="descri-pet-contaner">
+                <img src="img/animais/liz.jpeg" alt="">
+                <div class="dados-pet">
+                    <p style="color: var(--corPadrao);font-weight: bold;font-size:1.3em">Liz</p>
+                    <p>Brasil</p>
+                    <p>Entre 6 e 8 anos (Fêmea)</p>
+                    <p>2km de distância</p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="contaner infor-card-adotante">
+            <div class="div-adotante">
+                <p style="width: 80px;"><img src="img/imagens/stephanie.jpeg" alt=""></p>
+                <p style="font-weight: bold; font-size: 1em;">Stephanie <br>Online</p>
+
+            </div>
+            <div class="div-texto-adotante" style="text-align: center;">
+                <p style="text-align: left;font-size: 1.3em; padding-bottom: 30px;">Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Adipisci officiis vitae numquam nihil est qui fuga voluptatem labore,
+                    tempora, fugit odit animi quia quaerat maiores voluptas commodi minus quasi dignissimos!</p>
+
+            </div>
+            <div class="div-botao-adotante">
+                <a href="" id="fav"><img src="img/icones/heart.svg" alt=""></a>
+                <a href="">Adotar</a>
+                <a href="" id="msg"><img src="img/icones/Email.svg" alt=""></a>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

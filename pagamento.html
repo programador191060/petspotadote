@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagamento</title>
+    <link rel="stylesheet" href="pagamento.css">
+</head>
+<body>
+    <main id="contaner">
+        <aside id="cabecalho">
+            <p style="color: white; font-weight: bold;">PET SPOT</p>
+            <a href="#" id="voltar">Voltar</a>
+        </aside>
+
+        
+
+        <div id="conteudo">
+            <h2 style="color: rgb(238, 102, 62); text-align: center;">Detalhes do Pagamento</h2>
+            <div id="animationBar" style="align-items: center;">
+                <p style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 2; font-size: small; cursor: pointer;" id="cartao">cartão crédito</p>
+                <hr style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 3; border: none; height: 3px; background-color: rgb(238, 102, 62); width: 100%;" id="hr1">
+                <p style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2; font-size: small; cursor: pointer;" id="pix">PIX</p>
+                <hr style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3; border: none; height: 3px; background-color: rgb(238, 102, 62); width: 100%" id="hr2">
+                <p style="grid-column-start: 3; grid-column-end: 4; grid-row-start: 1; grid-row-end: 2; font-size: small;"></p>
+                <hr style="grid-column-start: 3; grid-column-end: 4; border: none; height: 3px; background-color: rgb(238, 102, 62); width: 100%;">
+                <p style="grid-column-start: 4; grid-column-end: 5; grid-row-start: 1; grid-row-end: 2; font-size: small;"></p>
+                <hr style="grid-column-start: 4; grid-column-end: 5; grid-row-start: 2; grid-row-end: 3; border: none; height: 3px; background-color: rgb(238, 102, 62); width: 100%;">
+            </div>
+
+
+            <div id="divFormulario">
+                <form action="">
+                    <div id="formsTextInput" style="margin-bottom: 5%;">
+                        <div style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 2; margin-bottom: 10px;">
+                            <label for="fCard" style="color: rgb(255, 134, 64); font-size: smaller;">
+                                Número Cartão</label>
+                            <br>
+                            <input type="text" name="fCard" id="fCard" maxlength="16" style="border-color: rgb(242, 92, 5); color: rgb(242, 92, 5); width: 150px; text-align: center;">
+                        </div>
+                        <div style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 1; grid-row-end: 2; margin-bottom: 10px;">
+                            <label for="fName" style="color: rgb(242, 92, 5); font-size: smaller;">
+                                Nome</label>
+                            <br>
+                            <input type="text" name="fName" id="fName" style="border-color: rgb(242, 92, 5); color: rgb(242, 92, 5);">
+                        </div>
+                        <div style="grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 3; margin-right: 0;">
+                            <label for="fDate" style="color: rgb(242, 92, 5); font-size: smaller;">
+                                Data Validade</label>
+                            <br>
+                            <input type="month" name="fDate" id="fDate" style="border-color: rgb(242, 92, 5); color: rgb(242, 92, 5); width: 100px; text-align: center;">
+                        </div>
+                        <div style="grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3;">
+                            <label for="fCVV" style="color: rgb(242, 92, 5); font-size: smaller;">
+                                CVV</label>
+                            <br>
+                            <input type="text" name="fCVV" id="fCVV" maxlength="3" style="border-color: rgb(242, 92, 5); color: rgb(242, 92, 5); width: 75px; text-align: center;">
+                        </div>
+                    </div>
+
+                    <p style="color: rgb(238, 102, 62)">Escolha uma frequência de doação</p>
+                    <div id="formsRadioButton" style="display: flex; flex-direction: row; justify-content: center; gap: 10px; width: 250px; margin: auto; margin-bottom: 5%; border-radius: 5px;">
+                        <div class="radio" id="radioMensal">
+                            Mensalmente
+                            <input type="radio" name="frequencia" id="mensalmente" style="display: none;">
+                        </div>
+                        <div class="radio" id="radioUma" style="margin-left: 0px;">
+                            Uma Vez
+                            <input type="radio" name="frequencia" id="umaVez" style="display: none;">
+                        </div>
+                    </div>
+
+                    <hr style="color: rgb(238, 102, 62); width: 80%;">
+                    <div id="buttons" style=" width:fit-content; margin: auto;">
+                        <input type="submit" value="COMFIRMAR" id="submit" style="cursor: pointer;">
+                        <input type="reset" value="LIMPAR" id="reset" style="cursor: pointer;">
+                    </div>
+                </form>
+            </div>
+            <div id="pixDiv">
+                <img src="" alt="qr-code" id="pixImg">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const cartaoButton = document.getElementById('cartao')
+        const pixButton = document.getElementById('pix')
+        
+        const hr1 = document.getElementById('hr1')
+        const hr2 = document.getElementById('hr2')
+
+        const divConteudo = document.getElementById('conteudo')
+        const divForm = document.getElementById('divFormulario')
+        const pixDiv = document.getElementById('pixDiv')
+        const pixImg = document.getElementById('pixImg')
+
+        cartaoButton.addEventListener('click', function(){
+            cartaoButton.style.fontWeight = 'bold'
+            pixButton.style.fontWeight = 'normal'
+            hr1.style.backgroundColor = 'rgb(200, 75, 34)'
+            hr2.style.backgroundColor = 'rgb(238, 102, 62)'
+            divForm.style.display = 'grid'
+
+            pixDiv.style.display = 'none'
+        })
+        pixButton.addEventListener('click', function(){
+            pixButton.style.fontWeight = 'bold'
+            cartaoButton.style.fontWeight = 'normal'
+            hr2.style.backgroundColor = 'rgb(200, 75, 34)'
+            hr1.style.backgroundColor = 'rgb(238, 102, 62)'
+            divForm.style.display = 'none'
+            
+            pixImg.src = "qr-code.png"
+
+            pixDiv.style.display = 'inline-block'
+        })
+
+
+        const radioMensal = document.getElementById('radioMensal')
+
+        const radioUma = document.getElementById('radioUma')
+
+        radioMensal.addEventListener('click', function(){
+            radioMensal.style.backgroundColor = 'white';
+            radioMensal.style.color = 'rgb(238, 102, 62)'
+            radioMensal.style.fontWeight = 'bold'
+            radioUma.style.backgroundColor = 'rgb(238, 102, 62)'
+            radioUma.style.color = 'white'
+            radioUma.style.fontWeight = 'normal'
+        })
+        radioUma.addEventListener('click', function(){
+            radioUma.style.backgroundColor = 'white';
+            radioUma.style.color = 'rgb(238, 102, 62)'
+            radioUma.style.fontWeight = 'bold'
+            radioMensal.style.backgroundColor = 'rgb(238, 102, 62)'
+            radioMensal.style.color = 'white'
+            radioMensal.style.fontWeight = 'normal'
+        })
+    </script>
+</body>
+</html>

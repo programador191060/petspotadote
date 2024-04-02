@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Baloo', sans-serif;
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background-color: bisque;
+}
+p, a{
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+}
+
+
+#contaner {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 800px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#cabecalho{
+    background-color: rgb(238, 102, 62);
+    background-image: url(cachorro.png);
+    background-size: cover;
+    background-position: center;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 60%;
+    border-radius: 10px;
+}
+#voltar{
+    color: white; text-decoration: none;
+}
+#voltar:hover::before{
+    content: '< ';
+}
+
+#conteudo{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 5%;
+    padding: 5%;
+}
+#animationBar{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    color:rgb(238, 102, 62)
+}
+#divFormulario{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+}
+#divFormulario #formsTextInput{
+    grid-row-start: 1; grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+#divFormulario #formsRadioButton{
+    grid-row-start: 2; grid-row-end: 3;
+    background-color: rgb(238, 102, 62);
+}
+#divFormulario #buttons{
+    grid-row-start: 3; grid-row-end: 4;
+}
+
+.radio{
+    display: inline-block; 
+    padding: 10px; 
+    margin: 10px; 
+    border-radius: 10px;
+    background-color: rgb(238, 102, 62); 
+    border: 1px solid white;
+    color: white; font-size: smaller;
+    cursor: grab;
+}
+
+#submit, #reset{
+    background-color: rgb(238, 102, 62); 
+    padding: 10px; 
+    border-radius: 15px; 
+    color: white; 
+    border: none;
+}
+#submit:hover, #reset:hover{
+    background-color: rgb(255, 115, 70);
+}
+#submit:checked, #reset:checked{
+    background-color: rgb(242, 92, 5);
+}
+
+#pixDiv{
+    width: 438.883px;
+    height: 255.867px;
+    display: none;
+}
+#pixImg{
+    position: absolute;
+    display: flex;
+    left: 54%;
+    top: 395px;
+    width: 150px;
+    height: 150px;
+}

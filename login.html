@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pet Spot Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="div-modal">
+    <div class="contaner" id="login-modal">
+        <div id="efeito">
+            <h1>Bem-vindo!</h1>
+            <p>Preencha seus dados par continuar conectado conosco.</p>
+            <a href="#" id="m-login">Entrar</a>
+            <a href="#" id="m-cadastrar">Cadastrar</a>
+        </div>
+
+        <div class="criar-cadastro" id="cadastrar">
+            <h2>Crie uma conta</h2>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <input type="email" id="email" placeholder="Digite seu Email">
+            <input type="password" id="senha" placeholder="Digite sua senha">
+            <input type="password" id="pwd" placeholder="Confirme sua senha">
+            <div class="foto">
+                <a href="#" id="add-foto">
+                   <div class="im-camera"> <img src="img/icones/camera.svg" alt=""></div>
+                    Insira uma foto para seu perfil.
+                </a>
+            </div>
+            <div class="btn" id="btn_cadastrar" style="color: white; font-size: 20px; padding-top: 8px;">
+                Cadastrar
+            </div>
+
+
+        </div>
+
+
+        <div id="fazer-login">
+            <h2>Entre no Pet Spot</h2>
+            <div id="socialmedia">
+                <div class="redes"><img src="img/icones/facebook.svg" alt=""></div>
+                <div class="redes"><img src="img/icones/gmail.svg" alt=""></div>
+                <div class="redes"><img src="img/icones/twitterx.svg" alt=""></div>
+            </div>
+            <p>Faça login através de uma das redes acima ou entre com uma conta de e-mail.</p>
+            <input type="email" id="email2" placeholder="Digite seu Email">
+            <input type="password" id="pwd2" placeholder="Digite sua senha">
+            <a href="#">Esqueceu sua senha?</a>
+            <div class="btn" id="botaoLogin">
+                <a href="usuario.html" target="_parent" style="color: white; font-size: 25px;">Entrar</a>
+            </div>
+            <a id="Ncadastro" href="#" onclick="" style="font-size: 20px;">Criar Cadastro</a>
+
+        </div>
+
+    </div>
+</div>
+<script type="module">
+    import { animacao, writeUserData } from './script/action.js'
+
+    var mudar = document.getElementById("efeito");
+    var t_login = document.getElementById("fazer-login");
+    var t_cadastrar = document.getElementById("cadastrar");
+
+    var botaoCadastrar = document.getElementById('btn_cadastrar')
+    var botaoLogin = document.getElementById('botaoLogin')
+    // 
+    function login(email, pwd){
+        localStorage.setItem(`email`, email)
+        localStorage.setItem(`pwd`, pwd)
+    }
+    
+    botaoCadastrar.addEventListener('click', function(){
+        var nome = document.getElementById('nome').value
+        var email = document.getElementById('email').value
+        var senha = document.getElementById('senha').value
+        
+        writeUserData(nome, email, senha);
+        
+        mudar.style.left = "0px";
+        t_login.style.zIndex = "1";
+        t_cadastrar.style.zIndex = "-1";
+    })
+    botaoLogin.addEventListener('click', function(){
+        var email2 = document.getElementById('email2').value
+        var senha2 = document.getElementById('pwd2').value
+
+        login(email2, senha2)
+    })
+</script>
+</body>
+
+</html>

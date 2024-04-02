@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre seu Pet</title>
+    <link rel="stylesheet" href="css/cadPet.css">
+    <!-- <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --corPadrao: rgb(238, 102, 62);
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(168, 167, 167, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .contaner {
+            background-image: url(./img/imgbk_cad_pet.png);
+            width: 1000px;
+            height: 600px;
+            background-size: cover;
+            border: 1px solid black;
+            padding: 4%;
+
+        }
+
+        .contaner-formulario {
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .cadpet-conteudo {
+            background-image: url(./img/cadastroPet.PNG);
+            background-size: cover;
+            width: 40%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+
+
+        }
+
+        .cadpet-conteudo h2 {
+            color: white;
+            text-align: center;
+            margin-top: 30%;
+            font-weight: bold;
+            font-size: 2em;
+            font-family: "Baloo 2", sans-serif;
+        }
+
+        .cadpet-conteudo h3 {
+            color: white;
+            text-align: center;
+            margin-top: 60%;
+        }
+
+        .cadpet-conteudo h3 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+
+
+        }
+
+        .cad-pet {
+            width: 60%;
+            height: 100%;
+            background-color: white;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+        }
+
+        .cad-pet h2 {
+            color: var(--corPadrao);
+            padding: 10px;
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 5%;
+            font-weight: 900;
+            font-family: "Baloo 2", sans-serif;
+        }
+
+        form label {
+            margin-left: 27px;
+            font-size: 1.2em;
+        }
+
+        input {
+            border-radius: 20px;
+            line-height: 30px;
+            width: 80%;
+            margin-left: 25px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            font-size: 1em;
+            border: 0.5px solid gray;
+        }
+
+        #ico-foto {
+            background-image: url(img/camera.svg);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 170px) center;
+            background-size: auto;
+
+            padding-left: 50px;
+            border: 0.5px solid gray;
+            margin-top: 9%;
+            cursor: pointer;
+            outline: none;
+        }
+
+        form {
+
+            width: 100%;
+            height: 100%;
+            font-family: "Baloo 2", sans-serif;
+        }
+
+        label {
+            color: gray
+        }
+
+        .cont-formulario {
+            display: flex;
+
+        }
+
+        .f1 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .f2 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .div-input-sexo {
+            display: flex;
+            width: 80%;
+            line-height: 30px;
+            border-radius: 20px;
+            margin-left: 25px;
+            border: 0.5px solid gray;
+            justify-content: space-around;
+            padding: 5px 0;
+
+        }
+
+        .div-input-sexo span {
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 0 20px;
+            line-height: 20px;
+            border: 0.5px solid gray;
+
+        }
+
+        .div-select-peso {
+            width: 90%;
+            line-height: 30px;
+            border-radius: 20px;
+            margin-left: 25px;
+            border: 0.5px solid gray;
+            margin-right: 25px;
+            margin-top: 1%;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px 0;
+        }
+
+        .div-select-peso span {
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 0 20px;
+            line-height: 20px;
+        }
+
+        .btn-cad-pet {
+            width: 90%;
+            line-height: 30px;
+            border-radius: 20px;
+            margin-left: 25px;
+
+            margin-right: 25px;
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .btn-cad-pet a {
+            text-decoration: none;
+            border-radius: 20px;
+            background-color: var(--corPadrao);
+            color: white;
+            font-weight: bolder;
+            padding: 8px 40px;
+            border: none;
+        } 
+    </style> -->
+</head>
+
+<body>
+
+    <div class="contaner">
+
+        <div class="contaner-formulario">
+            <div class="cadpet-conteudo">
+                <h2>PET SPOT</h2>
+                <h3><a href="#">Voltar</a></h3>
+            </div>
+
+            <div class="cad-pet">
+                <h2>Olá, nós amamos pets! Nos dê o básico sobre o seu animalzinho.</h2>
+                <form action="" id="form-cad-pet">
+                    <div class="cont-formulario">
+                        <div class="f1">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" placeholder="Nome do pet">
+                            <label for="raca">Raça</label>
+                            <input type="text" id="raca" placeholder="Raça do pet">
+                            <label for="genero">Genero</label>
+                            <div class="div-input-sexo">
+
+                                <span style="background-color: var(--corPadrao);color:white">Fêmea</span>
+                                <span>Macho</span>
+                            </div>
+
+                        </div>
+
+                        <div class="f2">
+                            <!-- <label for="ico-foto">Carregar uma foto</label> -->
+                            <input type="text" id="ico-foto" readonly="true" placeholder="Carregar uma foto">
+                            <label for="nascimento">Data de Nascimento</label>
+                            <input type="text" id="nascimento" placeholder="DD/MM/AAAA">
+                            <label for="">Esterelizado ou castrado</label>
+                            <div class="div-input-sexo">
+
+                                <span style="background-color: var(--corPadrao);color:white">Sim</span>
+                                <span>Não</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <label for="">Peso</label>
+                    <div class="div-select-peso">
+                        <span style="background-color:var(--corPadrao);color:white">0-11kg</span>
+                        <span>11-22kg</span>
+                        <span>22-45kg</span>
+                        <span>45+kg</span>
+
+                    </div>
+                    <div class="btn-cad-pet">
+                        <a href="#">CADASTRAR</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

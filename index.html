@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PetSpot</title>
+      <link rel="stylesheet" href="css/index.css">
+      <script src="js/script.js" defer></script>
+</head>
+
+<body class="body-page " onresize="tela_resize()">
+      <main id="tela">
+            <header>
+                  <h1>PetSpot</h1>
+                  <div class="contanet-links">
+                        <nav id="nav-menu" class="">
+
+                              <a href="#">Sobre Nós</a>
+                              <a href="#h2-testemunhos">Testemunhos</a>
+                              <a href="#" id="f_conoscoPage">Contato</a>
+                              <a href=" login.html" target="_self">Login</a>
+
+                        </nav>
+                        <a id="icon-hambuguer"><img id="btn-menu" src="img/icones/menu_40px.png" alt=""
+                                    onclick="menu()"></a>
+                  </div>
+
+            </header>
+            <div class="div-sobre-nos">
+                  <div class="div-conteudo">
+                        <h2>PetSpot</h2>
+                        <p>A Pet Spot é uma rede social voltada para amantes de pets. Nosso objetivo principal é dar
+                              visibilidade para a adoção consciente e ser a ponte entre pessoas que precisam de
+                              companhia e pets que estão esperando a oportunidade de fazer alguém feliz. Um match
+                              perfeito!</p>
+                        <span><a href="#">ADOTE UM AMIGO</a></span>
+
+                  </div>
+                  <div class="div-logo">
+                        <img src="img/logo.svg" alt="">
+                  </div>
+            </div>
+
+            <h2 id="h2-testemunhos">Testemunhos</h2>
+            <!-- <div class="div-testemunhos"> -->
+            <div class="div-contaner-carrosel">
+
+                  <!-- <div class="div-testemunhos-videos"> -->
+                  <div class="content">
+                        <div class="slides">
+                              <input type="radio" name="slide" id="slide1">
+                              <input type="radio" name="slide" id="slide2">
+                              <input type="radio" name="slide" id="slide3">
+                              <input type="radio" name="slide" id="slide4">
+                              <input type="radio" name="slide" id="slide5">
+                              <input type="radio" name="slide" id="slide6">
+                              <div class="slide s1">
+                                    <img src="img/carrosel/230426_PLANTAO-DE-CASTRACAO-VACINACAO_DG-1.jpg" alt="">
+                              </div>
+                              <div class="slide">
+                                    <img src="img/carrosel/24-07-feira-adocao-capao-do-corvo_Alisson-Moura-26.jpg"
+                                          alt="">
+                              </div>
+                              <div class="slide">
+                                    <img src="img/carrosel/5-motivos-para-adotar-um-gato-ao-inves-de-compralo.jpeg"
+                                          alt="">
+                              </div>
+                              <div class="slide">
+                                    <img src="img/carrosel/6d124a69f00e019b79cfe0cd83947fb3.jpg" alt="">
+                              </div>
+                              <div class="slide">
+                                    <img src="img/carrosel/9617ab3385e86b0809a8c29e9fb55fca.jpg" alt="">
+                              </div>
+
+                              <div class="slide">
+                                    <img src="img/carrosel/campanha_adocao_setembro.jpg" alt="">
+                              </div>
+                        </div>
+                        <div class="navigator">
+                              <label id="lb1" class="bar" for="slide1"></label>
+                              <label id="lb2" class="bar" for="slide2"></label>
+                              <label id="lb3" class="bar" for="slide3"></label>
+                              <label id="lb4" class="bar" for="slide4"></label>
+                              <label id="lb5" class="bar" for="slide5"></label>
+                              <label id="lb6" class="bar" for="slide6"></label>
+                        </div>
+                  </div>
+            </div>
+            <!-- <iframe width="900" height="600" src="https://www.youtube.com/embed/Q2jJ5FU84lY" title="Campanha Vira Amigo - adoção de animais" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <!-- </div> -->
+            <div class="div-card-testemunhos">
+
+                  <div class="card-videos">
+                        <figure>
+                              <img id="sl1" src="img/carrosel/230426_PLANTAO-DE-CASTRACAO-VACINACAO_DG-1.jpg" alt="">
+                        </figure>
+                  </div>
+
+                  <div class="card-videos">
+                        <figure>
+                              <img id="sl2" src="img/carrosel/24-07-feira-adocao-capao-do-corvo_Alisson-Moura-26.jpg"
+                                    alt="">
+                        </figure>
+                  </div>
+
+                  <div class="card-videos">
+                        <figure>
+                              <img id="sl3" src="img/carrosel/5-motivos-para-adotar-um-gato-ao-inves-de-compralo.jpeg"
+                                    alt="">
+                        </figure>
+                  </div>
+
+                  <div class="card-videos">
+                        <figure>
+                              <img id="sl4" src="img/carrosel/6d124a69f00e019b79cfe0cd83947fb3.jpg" alt="">
+                        </figure>
+                  </div>
+
+                  <div class="card-videos">
+                        <figure>
+                              <img id="sl5" src="img/carrosel/9617ab3385e86b0809a8c29e9fb55fca.jpg" alt="">
+                        </figure>
+                  </div>
+
+                  <div class="card-videos">
+                        <figure>
+                              <img id="sl6" src="img/carrosel/campanha_adocao_setembro.jpg" alt="">
+                        </figure>
+                  </div>
+
+
+            </div>
+            </div>
+            <div class="div-adocao">
+                  <h2>Conheça essas fofuras!</h2>
+                  <div class="contaner-cards">
+                        <div class="div-adocao-card">
+                              <figure>
+                                    <img src="img/animais/romeu.jpg" alt="">
+                                    <figcaption>
+                                          <p>Romeu</p>
+                                          <p>São Paulo</p>
+                                    </figcaption>
+                              </figure>
+
+                        </div>
+
+
+                        <div class="div-adocao-card">
+                              <figure>
+                                    <img src="img/animais/murilo.jpg" alt="">
+                                    <figcaption>
+                                          <p>Murilo</p>
+                                          <p>São Paulo</p>
+                                    </figcaption>
+                              </figure>
+
+                        </div>
+
+                        <div class="div-adocao-card">
+                              <figure>
+                                    <img src="img/animais/molly-460.png" alt="">
+                                    <figcaption>
+                                          <p>Molly</p>
+                                          <p>São Paulo</p>
+                                    </figcaption>
+                              </figure>
+
+                        </div>
+
+                        <div class="div-adocao-card">
+                              <figure>
+                                    <img src="img/animais/milena.jpg" alt="">
+                                    <figcaption>
+                                          <p>Milena</p>
+                                          <p>São Paulo</p>
+                                    </figcaption>
+                              </figure>
+
+                        </div>
+
+                        <div class="div-adocao-card">
+                              <figure>
+                                    <img src="img/animais/liz.jpeg" alt="">
+                                    <figcaption>
+                                          <p>Liz</p>
+                                          <p>São Paulo</p>
+                                    </figcaption>
+                              </figure>
+
+                        </div>
+                  </div>
+
+
+                  <footer>
+                        <div class="rodape">
+                              <h3>Ficou alguma dúvida? Entre em contato conosco.</h3>
+                              <p>Você pode entrar em contato conosco através dos nossos canais ao lado para sanar
+                                    dúvidas, realizar avaliações ou sugestões. </p>
+                        </div>
+
+                        <div class="rede-social">
+                              <div class="icones">
+                                    <img src="img/twitter_circled.svg" alt="">
+                                    <img src="img/instagram_logo.svg" alt="">
+                                    <img src="img/facebook.svg" alt="">
+                                    <img src="img/gmail_logo.svg" alt="">
+                              </div>
+                              <span>Rede sociais e email</span>
+                        </div>
+
+                  </footer>
+
+
+      </main>
+
+      <!--Fim do codigo ===================================================================================== -->
+      <dialog id="fale-conosco-page">
+
+            <head>
+
+                  <link rel="stylesheet" href="css/contato.css">
+                  <script src="js/jquery.3.6.0.js" defer></script>
+                  <script src="js/envia_email.js" defer></script>
+
+
+            </head>
+            <div id="div-modal">
+                  <div class="contato-contane">
+                        <div class="contato-formulario">
+                          <h1 style="font-size: 4em;">Contato</h1>
+                          <p style="font-size: 1.5em; id="contato-text">Entre em contato conosco a qualquer hora. Nós iremos responder assim que possivel.</p>
+                          <input id="cont-nome" type="text" placeholder="Nome">
+                         <input id="cont-email" type="text" placeholder="E-mail">
+                         <textarea id="cont-messagem" name="messagem" id="messagem" cols="30" rows="5" placeholder="Menssagem" style="resize: none"></textarea>
+                         <button style="font-size: 1.5em; id="btn-enviar">ENVIAR</button>
+                       
+                      </div>
+                        <div class="contato-modal-esq">
+                        </div>
+                      <div class="contato-modal-dir">
+                      </div>
+              
+                      <div class="contato-modal-center-dir">
+                          <div class="center-enfeite">
+                            <h3>INFO</h3>
+                          </div>
+              <!-- 
+                         <div id="email"><img src="img/mensagemIcon.svg"> 
+                          petspot@gmail.com</div>
+                          
+                          <div id="contato">0800 123 4567</div>
+              
+                          <div id="endereco">R. Tito, 54 - Vila Romana, São Paulo - SP, 05051-000</div>
+              
+                          <div id="horario">08:00h - 21:00h</div> -->
+              
+                        <div class="contatoInfo"> <img src="img/iconEmail.svg" alt="e-mail" class="icons">petspot.adote@gmail.com</div>
+                        <div class="contatoInfo"> <img src="img/phoneIcon.svg" alt="telefone" class="icons">+0800-123-4567</div>
+                        <div class="contatoInfo"> <img src="img/enderecoIcon.svg" alt="endereco" class="icons">R. Tito, 54 - Vila Romana, São Paulo- SP, 05051-000</div>
+                        <div class="contatoInfo"> <img src="img/clockIcon.svg" alt="horario" class="icons">08:00 - 21:00</div>
+                  </div>
+              
+              
+                  </div>
+              
+              
+              </div>
+
+          
+
+
+      </dialog>
+      <script>
+            var modalFaleConoscoPage = document.querySelector('#fale-conosco-page');
+            var btn_fale_conoscoPage = document.querySelector('#f_conoscoPage');
+            btn_fale_conoscoPage.onclick = function () {
+                  modalFaleConoscoPage.showModal();
+            }
+      </script>
+
+</body>
+
+</html>

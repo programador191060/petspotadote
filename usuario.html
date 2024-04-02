@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSpot Usuario</title>
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    
+    <script src="js/usuario.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header class="menu-topo">
+            <img src="img/menu.svg" alt="">
+
+        </header>
+        <nav id="nav-menu">
+            <ul>
+                <li><a id="pg-cad-pet" href="#">Cadastre seu Pet</a></li>
+                <li><a href="#" class="chat">Chat</a></li>
+                <li><a id="tl-doacao" href="pagamento.html">Doação</a></li>
+                <li><a href="#"><img src="img/imagens/logo-removebg-preview.png" alt=""></a></li>
+                <li><a href="#" class="adote">Adoções</a></li>
+                <li><a id="f_conosco" href="#">Fale Conosco</a></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+        <div class="div-panel-usuario">
+            <div class="div-pesquisa-usuario">
+                <input type="text" placeholder="Pesquisa" id="input-pesquisa">
+            </div>
+            <div class="div-status">
+                <span>Stephanie</span>
+                <span>Online</span>
+            </div>
+            <div class="div-foto-usuario">
+
+            </div>
+
+        </div>
+        <div class="div-contaner-conteudo">
+            <div class="div-conteudo-menu-lateral">
+                <ul>
+                    <li><a href="#">Doação</a></li>
+                    <li><a href="#">Favoritos</a></li>
+                    <li><a href="#" id="lista-adocao">Lista de Adoções</a></li>
+                    <li><a href="#">Messagens</a></li>
+                    <li><a href="cadastropet.html">Cadastre seu pet</a></li>
+                    <li><a href="#" id="BatePapo">Bate papo</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Lares Temporarios</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="index.html">Sair</a></li>
+                </ul>
+            </div>
+            <div class="div-iframe-conteudo">
+
+                <div class="div-iframe">
+
+                    <iframe src="adocao.html" frameborder="0" id="frame">
+
+                    </iframe>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- Tela Modal cadastro do pet -->
+
+    <dialog id="McadPet">
+
+        <head>
+            <link rel="stylesheet" href="css/cadPet.css">
+        </head>
+
+        <div class="contaner">
+
+            <div class="contaner-formulario">
+                <div class="cadpet-conteudo">
+                    <h2>PET SPOT</h2>
+                    <h3><a href="#">Voltar</a></h3>
+                </div>
+
+                <div class="cad-pet">
+                    <h2>Olá, nós amamos pets! Nos dê o básico sobre o seu animalzinho.</h2>
+                    <form action="" id="form-cad-pet">
+                        <div class="cont-formulario">
+                            <div class="f1">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" placeholder="Nome do pet">
+                                <label for="raca">Raça</label>
+                                <input type="text" id="raca" placeholder="Raça do pet">
+                                <label for="genero">Genero</label>
+                                <div class="div-input-sexo">
+
+                                    <span style="background-color: var(--corPadrao);color:white">Fêmea</span>
+                                    <span>Macho</span>
+                                </div>
+
+                            </div>
+
+                            <div class="f2">
+                                <!-- <label for="ico-foto">Carregar uma foto</label> -->
+                                <input type="text" id="ico-foto" readonly="true" placeholder="Carregar uma foto">
+                                <label for="nascimento">Data de Nascimento</label>
+                                <input type="text" id="nascimento" placeholder="DD/MM/AAAA">
+                                <label for="">Esterelizado ou castrado</label>
+                                <div class="div-input-sexo">
+
+                                    <span style="background-color: var(--corPadrao);color:white">Sim</span>
+                                    <span>Não</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <label for="">Peso</label>
+                        <div class="div-select-peso">
+                            <span style="background-color:var(--corPadrao);color:white">0-11kg</span>
+                            <span>11-22kg</span>
+                            <span>22-45kg</span>
+                            <span>45+kg</span>
+
+                        </div>
+                        <div class="btn-cad-pet">
+                            <a href="#">CADASTRAR</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </dialog>
+    <dialog id="fale-conosco">
+     
+        <head>
+            
+            <link rel="stylesheet" href="css/contato.css">
+            <script src="js/jquery.3.6.0.js" defer></script>
+            <script src="js/envia_email.js" defer></script>
+            
+
+        </head>
+
+      
+
+            <div id="div-modal">
+                <div class="contato-contane">
+                    <div class="contato-formulario">
+                        <h1>Contato</h1>
+                        <p id="contato-text">Entre em contato conosco a qualquer hora. Nós iremos responder assim que
+                            possivel.</p>
+                            <input id="cont-nome" type="text" placeholder="Nome">
+                            <input id="cont-email" type="text" placeholder="E-mail">
+                            <textarea id="cont-messagem" name="messagem" id="messagem" cols="30" rows="5" placeholder="Menssagem" style="resize: none"></textarea>
+                        <button id="btn-enviar">ENVIAR</button>
+                    </div>
+                    <div class="contato-modal-esq">
+                    </div>
+                    <div class="contato-modal-dir">
+                    </div>
+
+                    <div class="contato-modal-center-dir">
+                        <div class="center-enfeite">
+                            <h3>INFO</h3>
+                        </div>
+                        <!-- 
+               <div id="email"><img src="img/mensagemIcon.svg"> 
+                petspot@gmail.com</div>
+                
+                <div id="contato">0800 123 4567</div>
+    
+                <div id="endereco">R. Tito, 54 - Vila Romana, São Paulo - SP, 05051-000</div>
+    
+                <div id="horario">08:00h - 21:00h</div> -->
+
+                        <div class="contatoInfo"> <img src="img/iconEmail.svg" alt="e-mail"
+                                class="icons">petspot.adote@gmail.com</div>
+                        <div class="contatoInfo"> <img src="img/phoneIcon.svg" alt="telefone"
+                                class="icons">+0800-123-4567</div>
+                        <div class="contatoInfo"> <img src="img/enderecoIcon.svg" alt="endereco" class="icons">R. Tito,
+                            54 - Vila Romana, São Paulo- SP, 05051-000</div>
+                        <div class="contatoInfo"> <img src="img/clockIcon.svg" alt="horario" class="icons">08:00 - 21:00
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+           
+
+   
+
+    <script>
+        var modalFaleConosco = document.querySelector('#fale-conosco');
+        var modalCadPet = document.querySelector('#McadPet');
+        var btnModalCadPet = document.querySelector('#pg-cad-pet');
+        var btn_fale_conosco = document.querySelector('#f_conosco');
+        var modal_doacao = document.querySelector('#modal-doacao');
+        var btn_doacao = document.querySelector('#tl-doacao')
+       
+        // btn_doacao.onclick = function () {
+        //     modal_doacao.showModal();
+        // }
+        btnModalCadPet.onclick = function () {
+            modalCadPet.showModal();
+        }
+
+        btn_fale_conosco.onclick = function () {
+            modalFaleConosco.showModal();
+        }
+    </script>
+    
+   
+</body>
+
+</html>
